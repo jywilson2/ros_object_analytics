@@ -45,7 +45,7 @@ void Tracking::rectifyTracker(const cv::Mat& mat, const cv::Rect2d& rect)
   {
     tracker_.release();
   }
-  tracker_ = cv::Tracker::create("MIL");
+  tracker_ = cv::TrackerMIL::create();
   tracker_->init(mat, rect);
   rect_ = rect;
 }
